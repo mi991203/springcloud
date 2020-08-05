@@ -18,4 +18,9 @@ public class OrderController {
         return openFeignService.getPaymentById(id);
     }
 
+    @GetMapping("/consumer/payment/create/{serial}")
+    public CommonResult<Payment> create(Payment payment) {
+        return openFeignService.create(payment);
+    }
+
 }

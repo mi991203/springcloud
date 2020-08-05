@@ -9,9 +9,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-@FeignClient(value = "cloud-payment-service")
+@FeignClient(value = "CLOUD-PAYMENT-SERVICE")
 @Service
 public interface OpenFeignService {
     @GetMapping(value = "/payment/get/{id}")
     CommonResult<Payment> getPaymentById(@PathVariable("id") Long id);
+
+    @PostMapping(value = "/payment/create")
+    CommonResult<Payment> create(Payment payment);
 }

@@ -12,3 +12,7 @@ eureka:
   instance:
     instance-id: consumer-order80
     prefer-ip-address: true
+
+ribbon:
+  ReadTimeout: 5000
+  ConnectTimeout: 5000

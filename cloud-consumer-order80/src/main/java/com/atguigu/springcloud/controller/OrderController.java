@@ -23,4 +23,9 @@ public class OrderController {
         return openFeignService.create(payment);
     }
 
+    @GetMapping(value = "/consumer/payment/timeout")
+    public String getTryTimeOut() {
+        return openFeignService.getTryTimeOut();
+    }
+
 }

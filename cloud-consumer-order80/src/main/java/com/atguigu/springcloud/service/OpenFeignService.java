@@ -17,4 +17,7 @@ public interface OpenFeignService {
 
     @PostMapping(value = "/payment/create")
     CommonResult<Payment> create(Payment payment);
+
+    @GetMapping(value = "/payment/feign/timeout")
+    String getTryTimeOut();
 }
